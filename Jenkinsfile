@@ -1,6 +1,6 @@
 def containerName="docker-pipeline"
 def tag="latest"
-def dockerHubUser="anujsharma1990"
+def dockerHubUser="Akhil2598"
 def httpPort="8090"
 
 node {
@@ -23,7 +23,7 @@ node {
     }
 
     stage('Push to Docker Registry'){
-        withCredentials([usernamePassword(credentialsId: 'dockerHubAccount', usernameVariable: 'dockerUser', passwordVariable: 'dockerPassword')]) {
+        withCredentials([usernamePassword(credentialsId: 'dockerHubAccount', usernameVariable: 'Akhil2598', passwordVariable: 'Nani2598')]) {
             sh "docker login -u $dockerUser -p $dockerPassword"
             sh "docker tag $containerName:$tag $dockerUser/$containerName:$tag"
             sh "docker push $dockerUser/$containerName:$tag"
